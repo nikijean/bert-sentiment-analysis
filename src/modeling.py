@@ -61,7 +61,6 @@ class BertModel(object):
         # scheduler definingand how learning rate changes through time
         # AdamW = adam with weight decay
         # linear schedule with warmup builtin from transformers
-        # TODO: lookup AdamW
         # original bert paper recs something 2e-5 - 5e-5
         # what works well is 1e-5
         # epsilon value default is 1e-8
