@@ -101,7 +101,6 @@ class BertModel(object):
 
             with torch.no_grad():
                 outputs = self.model(**inputs)
-            #TODO: understand loss and logits outputs
             loss = outputs[0]
             logits = outputs[1]
             loss_val_total += loss.item()
@@ -121,7 +120,6 @@ class BertModel(object):
         return loss_val_avg, predictions, true_vals
 
     def train(self):
-        #TODO: work on understanding this function a bit better
         for epoch in tqdm(range(1, self.epochs + 1)):
 
             self.model.train()
